@@ -1,0 +1,22 @@
+dotnet --info
+.NET SDK:
+ Version:           8.0.101
+ Commit:            6eceda187b
+ Workload version:  8.0.100-manifests.69afb982
+
+sudo apt update
+apt list --upgradable
+
+~# curl -Lo dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/1975ec3e-0be7-460a-af09-2765318cab53/a07859c84a3e8990ccc77fb7efa53b28/dotnet-sdk-8.0.100-rc.2.23502.2-linux-x64.tar.gz
+
+sudo curl -Lo dotnet.tar.gz https://download.visualstudio.microsoft.com/download/pr/85bcc525-4e9c-471e-9c1d-96259aa1a315/930833ef34f66fe9ee2643b0ba21621a/dotnet-sdk-8.0.201-linux-x64.tar.gz
+~# mkdir dotnet
+sudo tar -C dotnet -xf dotnet.tar.gz
+sudo rm dotnet.tar.gz
+~# export DOTNET_ROOT=~/dotnet
+~# export PATH=$PATH:~/dotnet
+dotnet --version
+8.0.100-rc.2.23502.2
+
+sudo mkdir 8.0.100
+sudo cp -a /usr/share/dotnet/. /usr/share/dotnet/8.0.100
